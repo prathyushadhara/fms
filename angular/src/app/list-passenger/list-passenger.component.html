@@ -1,0 +1,23 @@
+
+
+<form #codeform=ngForm (ngSubmit)=findPassenger(codeform) >
+
+    <div class="form-group">
+    <label>pnrNumber</label>
+    <input type="any" name="pnrNumber"   ngModel class="form-control">
+  </div>
+    <input type="submit" value="Search" class="btn btn-success">
+  </form>
+  <br>
+  
+  <div *ngIf="passenger!==undefined">
+    
+       pnrNumber is  {{passenger.pnrNumber}}<br>
+       Name is{{passenger.passengerName}}<br>
+       Age {{passenger.passengerAge}}<br>
+       UIN is{{passenger.passengerUIN}}<br>
+        Gender is{{passenger.gender}}<br>
+  <br>
+ 
+  
+  </div>
